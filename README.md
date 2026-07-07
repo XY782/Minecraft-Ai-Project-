@@ -67,6 +67,42 @@ Each split should contain:
 - `Metadata/`
 - `block_labels.json`
 
+## Current Folder Structure (This Repository)
+
+Use this to verify paths if imports or file loading fail.
+If your folder tree is different, then you might have to rewrite some part of the code in the training python file
+```text
+Ai Project/
+	best_minecraft_model.pth
+	Environment trainer.py
+	Environment tester.py
+	README.md
+	Data/
+		train_data/
+			block_labels.json
+			PNG/
+			Masked/
+			Metadata/
+		val_data/
+			block_labels.json
+			PNG/
+			Masked/
+			Metadata/
+		test_data/
+			block_labels.json
+			PNG/
+			Masked/
+			Metadata/
+```
+
+If you get path errors, check these first:
+
+1. Run scripts from project root (`Ai Project/`).
+2. Make sure split names are exactly `train_data`, `val_data`, `test_data`.
+3. Make sure subfolder names are exactly `PNG`, `Masked`, `Metadata`.
+4. Make sure `block_labels.json` exists in each split folder.
+5. Make sure frame triplets are matched (same frame id across PNG/mask/json).
+
 ## Environment Trainer Overview
 
 Main trainer script:
@@ -155,4 +191,3 @@ Evaluation helper script:
 
 Use it to test model behavior and inspect outputs without retraining.
 
- 
