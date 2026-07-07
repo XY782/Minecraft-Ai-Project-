@@ -62,7 +62,7 @@ image = Image.open(image_path).convert("RGB")
 transform = transforms.ToTensor()
 
 image_tensor = transform(image)
-image_tensor = image_tensor.unsqueeze(0) # add batch dimension
+image_tensor = image_tensor.unsqueeze(0) 
 
 image_tensor = image_tensor.to(device)
 
@@ -85,11 +85,6 @@ prediction = prediction.squeeze(0).cpu().numpy()
 print(prediction.shape)
 print(np.unique(prediction))
 
-
-
-# -------------------
-# Display prediction
-# -------------------
 
 plt.figure(figsize=(12,5))
 
