@@ -1,5 +1,6 @@
 Minecraft Ai for the lonely souls:
 
+This readme is written by AI because I am very lazy
 This project currently only collects Minecraft environment data and trains a segmentation model on it.
 Further addition will be added if I'm in the mood
 
