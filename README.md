@@ -1,4 +1,6 @@
 Minecraft Ai for the lonely souls:
+!!!!EPILEPSY WARNING WHEN USING THE HUD.jar IN MINECRAFT!!!
+
 
 This readme is written by AI because I am very lazy
 This project currently only collects Minecraft environment data and trains a segmentation model on it.
